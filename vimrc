@@ -8,6 +8,7 @@ set nobackup
 set showcmd   " Show partial command
 set showmode  " Show the mode you are on the last line
 set showmatch " Show matching words during a search.
+set hlsearch  " Higlight search
 filetype on
 filetype plugin on
 syntax on
