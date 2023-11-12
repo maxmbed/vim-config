@@ -55,16 +55,18 @@ if filereadable(expand("~/.vim/plugged/vim/colors/nord.vim"))
 endif
 
 " Nerdtree rules
-if filereadable(expand("~/.vim/plugged/nerdtree/autoload/nerdtree.vim"))
-  nmap <C-t> :NERDTreeToggle<CR>
-
-  " Start Nerdtree and leave the cursor in it.
-  autocmd VimEnter * NERDTree | wincmd p
-
-  " Exit Vim if NERDTree is the only window remaining in the only tab.
-  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-endif
-
-if filereadable(expand("~/.config/coc/coc-config"))
-  source ~/.config/coc/coc-config
+if exists('ide') " ide mode: vim --cmd 'let ide=1'
+  if filereadable(expand("~/.vim/plugged/nerdtree/autoload/nerdtree.vim"))
+    nmap <C-t> :NERDTreeToggle<CR>
+  
+    " Start Nerdtree and leave the cursor in it.
+    autocmd VimEnter * NERDTree | wincmd p
+  
+    " Exit Vim if NERDTree is the only window remaining in the only tab.
+    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+  endif
+  
+  if filereadable(expand("~/.config/coc/coc-config"))
+    source ~/.config/coc/coc-config
+  endif
 endif
