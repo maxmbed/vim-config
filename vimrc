@@ -56,7 +56,7 @@ endif
 
 " Nerdtree rules
 if filereadable(expand("~/.vim/plugged/nerdtree/autoload/nerdtree.vim"))
-  nmap <C-f> :NERDTreeToggle<CR>
+  nmap <C-t> :NERDTreeToggle<CR>
 
   " Start Nerdtree and leave the cursor in it.
   autocmd VimEnter * NERDTree | wincmd p
