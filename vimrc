@@ -20,8 +20,8 @@ set statusline+=\row:\ %l\ col:\ %c\ percent:\ %p%% " Status line right side.
 set laststatus=2   " Show current file name
 set statusline=    " Clear status line when vimrc is reloaded.
 
-" Convert escape sequence of screen-term into proper Ctrl-<arrow>
-if &term == "screen"
+" Convert escape sequence of screen|temux-term into proper Ctrl-<arrow> input
+if &term =~ '^\%(screen\|tmux\)'
   map <Esc>[1;5C <C-Right>
   map <Esc>[1;5D <C-Left>
   map <Esc>[1;6C <C-Right>
