@@ -51,6 +51,7 @@ call plug#end()
 " Color scheme
 if filereadable(expand("~/.vim/plugged/vim/colors/nord.vim"))
   colorscheme nord
+  let g:nord_uniform_diff_background = 1 " https://github.com/nordtheme/vim/pull/61
 endif
 
 " Nerdtree rules
