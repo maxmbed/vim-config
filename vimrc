@@ -19,7 +19,7 @@ set statusline+=%=               " Use a divider to separate left from the right
 set statusline+=\row:\ %l\ col:\ %c\ percent:\ %p%% " Status line right side.
 set laststatus=2   " Show current file name
 
-" Convert escape sequence of screen|temux-term into proper Ctrl-<arrow> input
+" Convert escape sequence of screen|tmux-term into proper Ctrl-<arrow> input
 if &term =~ '^\%(screen\|tmux\)'
   map <Esc>[1;5C <C-Right>
   map <Esc>[1;5D <C-Left>
