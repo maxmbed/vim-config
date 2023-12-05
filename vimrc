@@ -18,7 +18,6 @@ set statusline+=\ %F\ %M\ %Y\ %R " Status line left side.
 set statusline+=%=               " Use a divider to separate left from the right side
 set statusline+=\row:\ %l\ col:\ %c\ percent:\ %p%% " Status line right side.
 set laststatus=2   " Show current file name
-set statusline=    " Clear status line when vimrc is reloaded.
 
 " Convert escape sequence of screen|temux-term into proper Ctrl-<arrow> input
 if &term =~ '^\%(screen\|tmux\)'
