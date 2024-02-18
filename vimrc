@@ -63,7 +63,7 @@ if exists('ide') " ide mode: vim --cmd 'let ide=1'
     autocmd VimEnter * NERDTree | wincmd p
   
     " Exit Vim if NERDTree is the only window remaining in the only tab.
-    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+    " autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
   endif
   
   if filereadable(expand("~/.config/coc/coc-config"))
