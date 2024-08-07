@@ -52,9 +52,10 @@ call plug#end()
 if filereadable(expand("~/.vim/plugged/vim/colors/nord.vim"))
   colorscheme nord
   let g:nord_uniform_diff_background = 1 " https://github.com/nordtheme/vim/pull/61
+  highlight Visual ctermfg=12 " fix default highlight for Visual
 endif
 
-" Nerdtree rules
+" vim-ide rules
 if exists('ide') " ide mode: vim --cmd 'let ide=1'
   if filereadable(expand("~/.vim/plugged/nerdtree/autoload/nerdtree.vim"))
     nmap <C-t> :NERDTreeToggle<CR>
@@ -68,5 +69,6 @@ if exists('ide') " ide mode: vim --cmd 'let ide=1'
   
   if filereadable(expand("~/.config/coc/coc-config"))
     source ~/.config/coc/coc-config
+    highlight CocInlayHint ctermbg=NONE " fix default highlight hint of Coc
   endif
 endif
